@@ -9,19 +9,24 @@
     "seed": "node seed.js",
     "setup": "npm install && echo Setup complete! Run 'npm start' to start the server."
   },
-  "keywords": ["quiz", "nodejs", "express", "mongodb"],
+  "keywords": [
+    "quiz",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.6.3",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "bcryptjs": "^2.4.3",
-    "express-session": "^1.17.3"
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^6.20.0",
+    "mongoose": "^7.6.3"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }
-
