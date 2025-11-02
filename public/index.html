@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <div>
+                    <h1>🧠 Quiz Master</h1>
+                    <p class="subtitle">Test your knowledge!</p>
+                </div>
+                <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
+                    <span class="user-info" id="user-info" style="color: white; font-weight: 600; padding: 8px 16px; background: rgba(255,255,255,0.2); border-radius: 8px;">Loading...</span>
+                    <button id="logout-btn" class="btn btn-secondary" style="display: none; padding: 8px 16px; font-size: 0.9em;">Logout</button>
+                </div>
+            </div>
+            <nav style="margin-top: 15px; display: flex; gap: 10px;">
+                <a href="index.html" style="padding: 8px 16px; background: rgba(255,255,255,0.2); color: white; text-decoration: none; border-radius: 8px; font-size: 0.9em;">Home</a>
+                <a href="dashboard.html" style="padding: 8px 16px; background: rgba(255,255,255,0.2); color: white; text-decoration: none; border-radius: 8px; font-size: 0.9em;">My Dashboard</a>
+            </nav>
+        </header>
+
+        <!-- Quiz Selection Screen -->
+        <div id="quiz-selection" class="screen active">
+            <div class="quiz-list">
+                <h2>Select a Quiz</h2>
+                <div id="quizzes-container" class="quizzes-grid">
+                    <div class="loading">Loading quizzes...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Taking Screen -->
+        <div id="quiz-taking" class="screen">
+            <div class="quiz-header">
+                <h2 id="quiz-title"></h2>
+                <p id="quiz-description"></p>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="current-question">1</span> / <span id="total-questions">1</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div id="question-container"></div>
+            </div>
+
+            <div class="quiz-actions">
+                <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                <button id="next-btn" class="btn btn-primary">Next</button>
+                <button id="submit-btn" class="btn btn-success" style="display: none;">Submit Quiz</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results" class="screen">
+            <div class="results-container">
+                <h2>Quiz Results</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-percentage">0</span>%
+                    </div>
+                    <p class="score-text">You scored <span id="score-value">0</span> out of <span id="total-score">0</span></p>
+                </div>
+
+                <div class="user-input">
+                    <input type="text" id="user-name" placeholder="Enter your name (optional)" maxlength="50">
+                    <button id="save-result-btn" class="btn btn-primary">Save Result</button>
+                </div>
+
+                <div id="results-details" class="results-details"></div>
+
+                <div class="results-actions">
+                    <button id="restart-btn" class="btn btn-secondary">Take Another Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

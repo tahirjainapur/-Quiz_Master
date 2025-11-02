@@ -1,0 +1,50 @@
+========================================
+   TERMINAL COMMANDS - QUIZ MASTER
+========================================
+
+POWERSHELL (What you're using - the $ prompt)
+--------------------------------------------
+
+Step 1: Navigate to folder
+   cd E:\Quiz_Master
+
+Step 2: Start server
+   npm start
+
+That's it! Server runs on http://localhost:3000
+
+--------------------------------------------
+
+COMMAND PROMPT (CMD - the > prompt)
+--------------------------------------------
+
+Step 1: Navigate to folder
+   cd E:\Quiz_Master
+
+Step 2: Start server
+   npm start
+
+OR combine (only works in CMD):
+   cd E:\Quiz_Master && npm start
+
+--------------------------------------------
+
+STOP THE SERVER
+--------------------------------------------
+
+Press: Ctrl + C
+
+OR use the batch file:
+   Double-click STOP_SERVER.bat
+
+--------------------------------------------
+
+EASIEST WAY (Windows)
+--------------------------------------------
+
+Just double-click: START.bat
+(No terminal needed!)
+
+========================================
+
+

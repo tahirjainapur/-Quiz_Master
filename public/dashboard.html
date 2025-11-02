@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>My Dashboard - Quiz Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Quiz Master</h1>
+            <div class="header-actions">
+                <span class="user-info" id="user-info">Loading...</span>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <nav class="dashboard-nav">
+            <a href="index.html" class="nav-link">Take Quiz</a>
+            <a href="dashboard.html" class="nav-link active">My Dashboard</a>
+        </nav>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="dashboard-section">
+            <div class="loading">Loading your dashboard...</div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div id="dashboard-content" style="display: none;">
+            <!-- Stats Section -->
+            <div class="dashboard-section">
+                <h2>📊 Your Performance</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-value" id="total-quizzes">0</div>
+                        <div class="stat-label">Quizzes Taken</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-value" id="avg-score">0%</div>
+                        <div class="stat-label">Average Score</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-value" id="best-score">0%</div>
+                        <div class="stat-label">Best Score</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-value" id="total-correct">0</div>
+                        <div class="stat-label">Total Correct</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Chart -->
+            <div class="dashboard-section">
+                <h2>📈 Score Trend</h2>
+                <div class="chart-container">
+                    <canvas id="performance-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Quiz History -->
+            <div class="dashboard-section">
+                <h2>📚 Quiz History</h2>
+                <div id="quiz-history-container">
+                    <div class="loading">Loading quiz history...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Not Authenticated -->
+        <div id="not-authenticated" class="dashboard-section" style="display: none;">
+            <div class="auth-prompt">
+                <h2>Please Login</h2>
+                <p>You need to be logged in to view your dashboard.</p>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <a href="signup.html" class="btn btn-secondary">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

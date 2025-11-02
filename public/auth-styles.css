@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h1 {
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 1em;
+}
+
+.auth-form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group small {
+    display: block;
+    color: #666;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+    font-size: 0.9em;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-footer p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 8px 0;
+}
+
+.auth-footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.auth-footer a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .auth-container {
+        max-width: 500px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .auth-card {
+        padding: 30px 25px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .auth-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .auth-header h1 {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+    }
+    
+    .auth-header p {
+        font-size: 0.9em;
+    }
+    
+    .form-group {
+        margin-bottom: 18px;
+    }
+    
+    .form-group input {
+        padding: 14px 15px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .btn {
+        padding: 14px;
+        font-size: 1em;
+        min-height: 44px; /* iOS touch target */
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        -webkit-tap-highlight-color: transparent;
+        min-height: 44px;
+    }
+    
+    .btn:active {
+        transform: scale(0.98);
+    }
+    
+    .auth-footer a {
+        -webkit-tap-highlight-color: rgba(102, 126, 234, 0.2);
+        padding: 5px;
+        display: inline-block;
+        min-height: 44px;
+        line-height: 44px;
+    }
+}
+

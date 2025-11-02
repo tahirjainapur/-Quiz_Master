@@ -1,0 +1,103 @@
+═══════════════════════════════════════════════════════════════
+   STEP-BY-STEP GITHUB COMMANDS FOR QUIZ MASTER PROJECT
+═══════════════════════════════════════════════════════════════
+
+IMPORTANT: Replace "YOUR_USERNAME" with your actual GitHub username!
+
+═══════════════════════════════════════════════════════════════
+STEP 1: Navigate to your project folder
+═══════════════════════════════════════════════════════════════
+
+cd /d E:\Quiz_Master
+
+
+═══════════════════════════════════════════════════════════════
+STEP 2: Initialize Git repository
+═══════════════════════════════════════════════════════════════
+
+git init
+
+
+═══════════════════════════════════════════════════════════════
+STEP 3: Set your name and email (only first time)
+═══════════════════════════════════════════════════════════════
+
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+
+═══════════════════════════════════════════════════════════════
+STEP 4: Add all files to Git
+═══════════════════════════════════════════════════════════════
+
+git add .
+
+
+═══════════════════════════════════════════════════════════════
+STEP 5: Create first commit
+═══════════════════════════════════════════════════════════════
+
+git commit -m "Initial commit - Quiz Master app"
+
+
+═══════════════════════════════════════════════════════════════
+STEP 6: Add GitHub repository as remote
+═══════════════════════════════════════════════════════════════
+
+git remote add origin https://github.com/YOUR_USERNAME/Quiz_Master.git
+
+EXAMPLE: If your username is "tahir123", use:
+git remote add origin https://github.com/tahir123/Quiz_Master.git
+
+
+═══════════════════════════════════════════════════════════════
+STEP 7: Rename branch to main
+═══════════════════════════════════════════════════════════════
+
+git branch -M main
+
+
+═══════════════════════════════════════════════════════════════
+STEP 8: Push to GitHub (requires authentication)
+═══════════════════════════════════════════════════════════════
+
+git push -u origin main
+
+
+═══════════════════════════════════════════════════════════════
+   AUTHENTICATION NOTE:
+═══════════════════════════════════════════════════════════════
+
+When you run "git push", you'll be asked for:
+  - Username: Your GitHub username
+  - Password: You need a Personal Access Token (NOT your password!)
+
+HOW TO GET TOKEN:
+1. Go to GitHub.com → Your Profile Picture (top right)
+2. Settings → Developer settings → Personal access tokens
+3. Tokens (classic) → Generate new token (classic)
+4. Name: "Quiz Master"
+5. Check "repo" checkbox
+6. Generate token
+7. COPY THE TOKEN (you won't see it again!)
+8. Use this token as your password when pushing
+
+═══════════════════════════════════════════════════════════════
+   AFTER SUCCESS:
+═══════════════════════════════════════════════════════════════
+
+Your project will be live at:
+https://github.com/YOUR_USERNAME/Quiz_Master
+
+
+═══════════════════════════════════════════════════════════════
+   FOR FUTURE UPDATES (when you change code):
+═══════════════════════════════════════════════════════════════
+
+cd /d E:\Quiz_Master
+git add .
+git commit -m "Description of what you changed"
+git push
+
+═══════════════════════════════════════════════════════════════
+

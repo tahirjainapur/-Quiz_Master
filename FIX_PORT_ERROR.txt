@@ -1,0 +1,38 @@
+========================================
+   FIX: Port 3000 Already in Use
+========================================
+
+This error means another server is already running.
+
+SOLUTION 1: Stop all servers first
+------------------------------------
+In PowerShell, type:
+   Get-Process -Name node | Stop-Process -Force
+   
+Then start again:
+   npm start
+
+SOLUTION 2: Use the batch file
+------------------------------------
+Double-click: STOP_SERVER.bat
+Wait 2 seconds
+Double-click: START.bat
+
+SOLUTION 3: Command Prompt
+------------------------------------
+   taskkill /F /IM node.exe
+   npm start
+
+========================================
+   PREVENTION
+========================================
+
+The START.bat file now automatically stops
+any existing servers before starting.
+
+Just double-click START.bat - it handles
+everything automatically!
+
+========================================
+
+

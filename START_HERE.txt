@@ -1,0 +1,43 @@
+========================================
+   HOW TO START QUIZ MASTER
+========================================
+
+METHOD 1: Double-click START.bat
+   (Easiest - just double-click the file!)
+
+METHOD 2: PowerShell Terminal
+   
+   Step 1: Type this and press Enter:
+   cd E:\Quiz_Master
+   
+   Step 2: Type this and press Enter:
+   npm start
+
+METHOD 3: Command Prompt (CMD)
+   
+   Type this (all in one line) and press Enter:
+   cd /d E:\Quiz_Master && npm start
+
+========================================
+   TROUBLESHOOTING
+========================================
+
+If "cd" doesn't work, try:
+   Set-Location E:\Quiz_Master    (PowerShell)
+   cd /d E:\Quiz_Master           (CMD)
+
+If port 3000 is busy:
+   Double-click STOP_SERVER.bat
+   Then try starting again
+
+========================================
+   SUCCESS MESSAGES
+========================================
+
+When it works, you'll see:
+   Server is running on http://localhost:3000
+   Connected to MongoDB
+
+Then open: http://localhost:3000
+
+========================================
