@@ -170,9 +170,8 @@ SESSION_SECRET=your-secret-key-here
 
 For MongoDB Atlas:
 ```env
-MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/quiz_master
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/quiz_master
 ```
-**⚠️ Never commit your actual MongoDB credentials to Git!**
 
 ## 📝 NPM Scripts
 
